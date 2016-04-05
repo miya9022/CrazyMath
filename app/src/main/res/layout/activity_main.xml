@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background_img"
+    tools:context="com.example.observer.crazymath.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/timing"
+        android:progress="10"
+        style="@style/ProgressBarStyle"/>
+
+    <TextView
+        android:id="@+id/mark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="16pt"
+        android:textColor="@android:color/white"
+        android:text="10"
+        />
+
+    <TextView
+        android:id="@+id/text_counter"
+        android:textSize="45dp"
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Right"
+            android:onClick="onClick"
+            android:textSize="12pt"
+            android:background="@android:color/holo_red_dark"
+            />
+
+        <Button
+            android:id="@+id/btn_wrong"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Wrong"
+            android:onClick="onClick"
+            android:textSize="12pt"
+            android:background="@android:color/holo_blue_dark"
+
+            />
+
+    </LinearLayout>
+
+    <fragment
+        android:name="com.example.observer.crazymath.QuestionContinue"
+        android:id="@+id/dialog_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_question_continue" />
+
+</RelativeLayout>
